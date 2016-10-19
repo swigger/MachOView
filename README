@@ -31,3 +31,9 @@ The whole Mach-O parsing code needs to be reviewed and made more robust.
 
 Enjoy,
 fG!
+
+
+20 Oct 2016
+- Added and updated capstone lib to v3.0.5 RC1
+- Cleaned up files in capstone directory
+- update mach-o header file loader.h, nlist.h from xnu 3248.60.10
