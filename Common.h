@@ -16,8 +16,8 @@ extern int32_t numIOThread;
 extern int64_t nrow_total;  // number of rows (loaded and empty)
 extern int64_t nrow_loaded; // number of loaded rows
 
-#define NSSTRING(C_STR) [NSString stringWithCString: (char *)(C_STR) encoding: [NSString defaultCStringEncoding]]
-#define CSTRING(NS_STR) [(NS_STR) cStringUsingEncoding: [NSString defaultCStringEncoding]]
+#define NSSTRING(C_STR) [NSString stringWithCString: (char *)(C_STR) encoding: NSUTF8StringEncoding]
+#define CSTRING(NS_STR) [(NS_STR) cStringUsingEncoding: NSUTF8StringEncoding]
 
 #define N_ELEMENTS(ARR)   (sizeof(ARR)/sizeof(*(ARR)))
 #define FIRST_ELEM(ARR)   (&(ARR)[0])
