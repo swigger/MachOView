@@ -36,20 +36,20 @@ typedef std::map<uint64_t,uint64_t>                             ExceptionFrameMa
 {
   uint64_t                entryPoint;       // instruction pointer in thread command
   
-  CommandVector           commands;         // load commands
+  CommandVector           commands;         // load commands;Load Commands中的内容，每个只含头两个
   SegmentVector           segments;         // segment entries for 32-bit architectures
-  Segment64Vector         segments_64;      // segment entries for 64-bit architectures
+  Segment64Vector         segments_64;      // segment entries for 64-bit architectures；Load Commands中的内容
   SectionVector           sections;         // section entries for 32-bit architectures
-  Section64Vector         sections_64;      // section entries for 64-bit architectures
+  Section64Vector         sections_64;      // section entries for 64-bit architectures；Section64(***)部分
   NListVector             symbols;          // symbol entries in the symbol table for 32-bit architectures
-  NList64Vector           symbols_64;       // symbol entries in the symbol table for 64-bit architectures
-  IndirectSymbolVector    isymbols;         // indirect symbols
+  NList64Vector           symbols_64;       // symbol entries in the symbol table for 64-bit architectures；Symbol Table中的内容
+  IndirectSymbolVector    isymbols;         // indirect symbols；Dynamic Symbol Table/Indirect Symbols中地址对应的数据
   
   DylibVector             dylibs;           // imported dynamic libraries
   ModuleVector            modules;          // module table entries in a dynamic shared library for 32-bit architectures
   Module64Vector          modules_64;       // module table entries in a dynamic shared library for 64-bit architectures
   DataInCodeEntryVector   dices;            // data in code entries
-  char const *            strtab;           // pointer to the string table
+  char const *            strtab;           /// pointer to the string table；String Table中的内容
   
   //RelocMap                relocMap;         // section relocations
   SegmentInfoMap          segmentInfo;      // segment info lookup table by offset

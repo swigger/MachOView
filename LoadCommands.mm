@@ -2166,7 +2166,7 @@ using namespace std;
                               caption:caption
                              location:location
                        symtab_command:symtab_command];
-      
+      // 获得`String Table`的首地址。 imageOffset 为胖文件不同构架的偏移
       strtab = (char *)((uint8_t *)[dataController.fileData bytes] + imageOffset + symtab_command->stroff);
       
       for (uint32_t nsym = 0; nsym < symtab_command->nsyms; ++nsym)

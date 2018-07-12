@@ -1210,9 +1210,9 @@ using namespace std;
   
   NSRange range = NSMakeRange(location,0);
   NSString * lastReadHex;
-  
+  // nindsym: LC_DYSYMTAB->InSym Table Entries
   for (uint32_t nindsym = 0; nindsym < length / sizeof(uint32_t); ++nindsym)
-  {
+  { // 遍历LG_SEGMENT_64(__DATA)下的section
     uint32_t nsect = sections_64.size();
     while (--nsect > 0)
     {
@@ -1252,7 +1252,7 @@ using namespace std;
           [NSException raise:@"Symbol"
                       format:@"index is out of range %u", indirectIndex];
         }
-        
+        // strtab在LoadCommands.mm中获取。n_strx中保存了字符串列表的索引，这个索引存在Symbol Table中。
         symbolName = NSSTRING(strtab + [self getSymbol64ByIndex:indirectIndex]->n_un.n_strx);
         
         [node.details appendRow:[NSString stringWithFormat:@"%.8lX", range.location]
