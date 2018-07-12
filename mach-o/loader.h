@@ -427,8 +427,8 @@ struct section_64 { /* for 64-bit architectures */
 	uint32_t	reloff;		/* file offset of relocation entries */
 	uint32_t	nreloc;		/* number of relocation entries */
 	uint32_t	flags;		/* flags (section type and attributes)*/
-	uint32_t	reserved1;	/* reserved (for offset or index) */
-	uint32_t	reserved2;	/* reserved (for count or sizeof) */
+	uint32_t	reserved1;	/* reserved (for offset or index) "Indirect Sym Index": S_SYMBOL_STUBS，S_LAZY_SYMBOL_POINTERS，S_LAZY_DYLIB_SYMBOL_POINTERS，S_NON_LAZY_SYMBOL_POINTERS*/
+  uint32_t	reserved2;	/* reserved (for count or sizeof) "Size of Stubs": S_SYMBOL_STUBS*/
 	uint32_t	reserved3;	/* reserved */
 };
 

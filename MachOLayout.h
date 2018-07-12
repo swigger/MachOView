@@ -40,10 +40,10 @@ typedef std::map<uint64_t,uint64_t>                             ExceptionFrameMa
   SegmentVector           segments;         // segment entries for 32-bit architectures
   Segment64Vector         segments_64;      // segment entries for 64-bit architectures；Load Commands中的内容
   SectionVector           sections;         // section entries for 32-bit architectures
-  Section64Vector         sections_64;      // section entries for 64-bit architectures；Section64(***)部分
+  Section64Vector         sections_64;      // section entries for 64-bit architectures；Load Commands中所有LC_SEGMENT_64的子类Section64 Header(***)的集合
   NListVector             symbols;          // symbol entries in the symbol table for 32-bit architectures
   NList64Vector           symbols_64;       // symbol entries in the symbol table for 64-bit architectures；Symbol Table中的内容
-  IndirectSymbolVector    isymbols;         // indirect symbols；Dynamic Symbol Table/Indirect Symbols中地址对应的数据
+  IndirectSymbolVector    isymbols;         // indirect symbols；Dynamic Symbol Table/Indirect Symbols中地址对应的数据,两字节倒序
   
   DylibVector             dylibs;           // imported dynamic libraries
   ModuleVector            modules;          // module table entries in a dynamic shared library for 32-bit architectures

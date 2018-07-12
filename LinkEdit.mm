@@ -1212,7 +1212,7 @@ using namespace std;
   NSString * lastReadHex;
   // nindsym: LC_DYSYMTAB->InSym Table Entries
   for (uint32_t nindsym = 0; nindsym < length / sizeof(uint32_t); ++nindsym)
-  { // 遍历LG_SEGMENT_64(__DATA)下的section
+  { // 反向遍历LG_SEGMENT_64(__DATA)下的section
     uint32_t nsect = sections_64.size();
     while (--nsect > 0)
     {
@@ -1222,7 +1222,7 @@ using namespace std;
            (section_64->flags & SECTION_TYPE) != S_LAZY_SYMBOL_POINTERS &&
            (section_64->flags & SECTION_TYPE) != S_LAZY_DYLIB_SYMBOL_POINTERS &&
            (section_64->flags & SECTION_TYPE) != S_NON_LAZY_SYMBOL_POINTERS) ||
-          section_64->reserved1 > nindsym)
+          section_64->reserved1 > nindsym)  // 在上面几个S_*中，reserved1为"Indirect Sym Index"
       {
         // section type or indirect symbol index mismatch
         continue;
@@ -1242,7 +1242,7 @@ using namespace std;
       NSString * symbolName = nil;
       NSColor * color = nil;
       
-      // read indirect symbol index
+      // read indirect symbol index;Dynamic Symbol Table中的两字节
       uint32_t indirectIndex = [dataController read_uint32:range lastReadHex:&lastReadHex];
       
       if ((indirectIndex & (INDIRECT_SYMBOL_LOCAL | INDIRECT_SYMBOL_ABS)) == 0)
