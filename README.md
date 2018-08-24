@@ -31,3 +31,15 @@ The whole Mach-O parsing code needs to be reviewed and made more robust.
 
 Enjoy,
 fG!
+
+
+
+# 流程分析
+
+选择 File - Open Recent 打开文件时，调用 AppController.mm 的方法
+
+```objc
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+```
+
+来打开文件。
