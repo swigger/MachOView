@@ -32,7 +32,9 @@ The whole Mach-O parsing code needs to be reviewed and made more robust.
 Enjoy,
 fG!
 
+# TODO
 
+- [ ] `__TEXT,__stubs`中的 Data 为汇编，将 Description 改为汇编
 
 # 流程分析
 
