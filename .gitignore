@@ -43,3 +43,4 @@ otool_disasm/disasm.xcodeproj/.svn/text-base/project.pbxproj.svn-base
 DerivedData/
 machoview.xcodeproj/xcuserdata/
 .DS_Store
+machoview.xcodeproj/project.xcworkspace/xcuserdata/
