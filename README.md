@@ -1,9 +1,11 @@
-   _____                .__     ____________   ____.__               
+```
+_____                .__     ____________   ____.__               
   /     \ _____    ____ |  |__  \_____  \   \ /   /|__| ______  _  __
  /  \ /  \\__  \ _/ ___\|  |  \  /   |   \   Y   / |  |/ __ \ \/ \/ /
 /    Y    \/ __ \\  \___|   Y  \/    |    \     /  |  \  ___/\     / 
 \____|__  (____  /\___  >___|  /\_______  /\___/   |__|\___  >\/\_/  
         \/     \/     \/     \/         \/                 \/        
+```
 
 A fork from MachOView to update and fix some bugs, mostly Mountain Lion & iOS 6 related.
 Also some small changes to the original behaviour.
@@ -45,3 +47,8 @@ fG!
 ```
 
 来打开文件。
+
+20 Oct 2016
+- Added and updated capstone lib to v3.0.5 RC1
+- Cleaned up files in capstone directory
+- update mach-o header file loader.h, nlist.h from xnu 3248.60.10
