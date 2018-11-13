@@ -14,24 +14,14 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
-.svn/*
-build/*
+.svn/
+build/
 English.lproj/.svn/all-wcprops
 English.lproj/.svn/entries
 English.lproj/.svn/text-base/InfoPlist.strings.svn-base
 English.lproj/.svn/text-base/Layout.xib.svn-base
 English.lproj/.svn/text-base/MainMenu.xib.svn-base
 English.lproj/.svn/text-base/Preferences.xib.svn-base
-mach-o/.svn/all-wcprops
-mach-o/.svn/entries
-mach-o/.svn/text-base/arch.h.svn-base
-mach-o/.svn/text-base/compact_unwind_encoding.h.svn-base
-mach-o/.svn/text-base/fat.h.svn-base
-mach-o/.svn/text-base/loader.h.svn-base
-mach-o/.svn/text-base/nlist.h.svn-base
-mach-o/.svn/text-base/ranlib.h.svn-base
-mach-o/.svn/text-base/reloc.h.svn-base
-mach-o/.svn/text-base/swap.h.svn-base
 mach-o/arm/.svn/all-wcprops
 mach-o/arm/.svn/entries
 mach-o/arm/.svn/text-base/reloc.h.svn-base
@@ -54,5 +44,7 @@ otool_disasm/.svn/text-base/symbol.c.svn-base
 otool_disasm/disasm.xcodeproj/.svn/all-wcprops
 otool_disasm/disasm.xcodeproj/.svn/entries
 otool_disasm/disasm.xcodeproj/.svn/text-base/project.pbxproj.svn-base
-*.xcuserstate
 IDEFindNavigatorScopes.plist
+
+DerivedData/
+.DS_Store

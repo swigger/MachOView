@@ -6,6 +6,7 @@
  *
  */
 
+#import <Foundation/Foundation.h>
 #import "Common.h"
 #import "DataController.h"
 #import "MachOLayout.h"
